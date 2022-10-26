@@ -32,7 +32,7 @@ const mkdirOptions = {
     fs.writeFileSync(
       path,
       fs
-        .readFileSync(`./template/template.${type}.txt`)
+        .readFileSync(`/Users/luna/.nvm/versions/node/v16.18.0/bin/template/template.${type}.txt`)
         .toString()
         .replace(/{Name}/g, firstCharUpperCaseModuleName)
         .replace(/{name}/g, moduleName),

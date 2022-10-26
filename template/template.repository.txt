@@ -1,8 +1,8 @@
-import { Repository } from 'typeorm';
-import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { I{Name}Repository } from '../../domain/repository'
-import { {Name}Entity } from '../entity'
+import { Repository } from 'typeorm'
+import { Injectable } from '@nestjs/common'
+import { InjectRepository } from '@nestjs/typeorm'
+import { I{Name}Repository } from 'src/{name}/domain/repository/i{name}.repository'
+import { {Name}Entity } from 'src/{name}/infra/entity/{name}.entity'
 
 @Injectable()
 export class {Name}Repository implements I{Name}Repository {
