@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common'
-import { {Name}Service } from './{name}.service'
+import { {Name}Service } from '../use-case/{name}.service'
 import { Create{Name}Dto } from './dto/create-{name}.dto'
 import { Update{Name}Dto } from './dto/update-{name}.dto'
 

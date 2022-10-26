@@ -1,0 +1,14 @@
+import { Repository } from 'typeorm';
+import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { I{Name}Repository } from '../../domain/repository'
+import { {Name}Entity } from '../entity'
+
+@Injectable()
+export class {Name}Repository implements I{Name}Repository {
+  constructor(
+    @InjectRepository({Name}Entity) private {name}Repository: Repository<{Name}Entity>,
+  ) { }
+
+
+}
