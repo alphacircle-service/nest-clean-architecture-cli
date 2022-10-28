@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import fs from 'fs'
+import TEMPLATE from '../lib/template/index.js'
 
 const SOURCE_ROOT = 'src'
 const DOMAIN_ROOT = 'domain'
@@ -31,11 +32,7 @@ const mkdirOptions = {
 
     fs.writeFileSync(
       path,
-      fs
-        .readFileSync(`/Users/luna/.nvm/versions/node/v16.18.0/bin/template/template.${type}.txt`)
-        .toString()
-        .replace(/{Name}/g, firstCharUpperCaseModuleName)
-        .replace(/{name}/g, moduleName),
+      TEMPLATE[type].replace(/{Name}/g, firstCharUpperCaseModuleName).replace(/{name}/g, moduleName),
     )
   }
 
