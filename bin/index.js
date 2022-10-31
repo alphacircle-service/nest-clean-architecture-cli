@@ -57,7 +57,7 @@ const PATH_PREFIX = {
     path += parentPath ? `${parentPath}/${fileName}` : `${fileName}`
 
     if (type === 'entity') {
-      fs.existsSync(path)
+      fs.existsSync(`${SOURCE_ROOT}/entities/${fileName}`)
         ? console.error('\x1b[31m%s\x1b[0m', `Error, already exists: ${path}`)
         : fs.writeFileSync(
             `${SOURCE_ROOT}/entities/${fileName}`,
